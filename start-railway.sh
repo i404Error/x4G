@@ -15,4 +15,7 @@ export UVICORN_PROXY_HEADERS="${UVICORN_PROXY_HEADERS:-true}"
 export UVICORN_FORWARDED_ALLOW_IPS="${UVICORN_FORWARDED_ALLOW_IPS:-*}"
 
 echo "Starting PasarGuard panel on port ${UVICORN_PORT}..."
+echo "========== TEMP KEY =========="
+/code/.venv/bin/pasarguard cli generate-temp-key || true
+echo "=============================="
 exec /code/start.sh
