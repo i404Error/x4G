@@ -15,7 +15,4 @@ export UVICORN_PROXY_HEADERS="${UVICORN_PROXY_HEADERS:-true}"
 export UVICORN_FORWARDED_ALLOW_IPS="${UVICORN_FORWARDED_ALLOW_IPS:-*}"
 
 echo "Starting PasarGuard panel on port ${UVICORN_PORT}..."
-echo "===== WHERE ====="
-find / -name pasarguard 2>/dev/null
-echo "===== END ====="
 exec /code/start.sh
